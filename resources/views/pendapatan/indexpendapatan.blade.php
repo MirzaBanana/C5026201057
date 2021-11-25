@@ -30,9 +30,9 @@
 			<td>{{ $p->Gaji }}</td>
             <td>{{ $p->Tunjangan }}</td>
 			<td>
-				<a href="/pendapatan/edit/{{ $p->pendapatan_id }}">Edit</a>
+				<a href="/pendapatan/edit/{{ $p->ID }}">Edit</a>
 				|
-				<a href="/pendapatan/hapus/{{ $p->pendapatan_id }}">Hapus</a>
+				<a href="/pendapatan/hapus/{{ $p->ID }}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach
