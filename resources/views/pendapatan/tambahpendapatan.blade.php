@@ -1,11 +1,14 @@
+@extends('layout.bahagia')
+@section('title', 'Data Pendapatan')
+@section('konten')
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Data Pendapatan Karyawan Perusahaan Sedot WC</title>
+	<title>Tambah Data Pendapatan Karyawan Perusahaan Sedot WC</title>
 </head>
 <body>
 
-	<h2>Tambah Pendapatan Karyawan Perusahaan Sedot WC</a></h2>
+
 	<h3>Tambah Pendapatan</h3>
 
 	<a href="/pendapatan"> Kembali</a>
