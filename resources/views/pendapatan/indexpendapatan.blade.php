@@ -1,6 +1,7 @@
 @extends('layout.bahagia')
 @section('title', 'Data Pendapatan')
 @section('konten')
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,12 +12,12 @@
 
 	<h3>Data Pendapatan Karyawan Sedot WC</h3>
 
-	<a href="/pendapatan/tambah"> + Tambah Pendapatan Pegawai</a>
+	<a href="/pendapatan/tambah" class="btn btn-primary"> + Tambah Pendapatan Pegawai</a>
 
 	<br/>
 	<br/>
 
-	<table border="1">
+	<table border="2">
 		<tr>
 			<th>IDPegawai</th>
 			<th>Bulan</th>

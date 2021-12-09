@@ -18,44 +18,47 @@
 
 <style>
     body{
-        background-color: antiquewhite;
+        background-color: rgb(255, 255, 255);
+    }
+.jumbotron{
+        background-color: #55c078;
+
     }
 
 </style>
 
 <body>
-<div class="container">
-  <h2>Database Pegawai Sedot WC</h2>
-  <center>
-      <img src="1_Mirza Aditya Badarudin_5026201057\ProfilMirzaAditya.jpg" class="mx-auto d-block" alt="foto pembuat">
-      <h5>Mirza Aditya Badarudin - 5026201057</h5>
-  </center>
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <img src="layouo\image0.jpg" class="rounded" alt="foto pembuat">
+  <h6>Mirza Aditya Badarudin</h6>
 </div>
-    <<div class="container">
-    <div class="col-sm-4">
-        <ul class="nav nav-pills nav-stacked">
-          <li><a href="/pegawai">Daftar Pegawai Sedot WC</a></li>
-          <li><a href="/absen">Absensi Pegawai Sedot WC</a></li>
-          <li><a href="/pendapatan">Data Pendapatan Pegawai Sedot WC</a></li>
-          <li><a href="#">Minggu Depan</a></li>
-          <li><a href="#">Praktikum</a></li>
-        </ul>
-    </div>
+    <div class="container">
+  <ul class="nav flex-column">
+    <li>
+      <a href="/pegawai">Daftar Pegawai Sedot WC</a>
+    </li>
+    <li>
+      <a href="/absen">Absensi Pegawai Sedot WC</a>
+    </li>
+    <li>
+      <a href="/pendapatan">Data Pendapatan Pegawai Sedot WC</a>
+    </li>
+    <li>
+      <a href="#">Minggu Depan</a>
+    </li>
+    <li>
+      <li><a href="#">Praktikum</a>
+    </li>
+  </ul>
+</div>
     <div class="col-sm-8">
     @section('konten')
     @show
     </div>
-    <footer>
-        <center>
-            <h6>
-                Copyrights Mirza Aditya Badarudin-5026201057
-            </h6>
-            <br>
-            <h6>
-                2021
-            </h6>
-        </center>
-    </footer>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+  <h6>Copyrights Mirza Aditya Badarudin</h6>
+  <h6>2021</h6>
+</div>
 </div>
 
 </body>

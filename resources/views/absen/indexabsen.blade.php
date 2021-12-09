@@ -9,15 +9,15 @@
 </head>
 <body>
 
-	<h2>Daftar Absensi Pegawai</h2>
+	<h3>Daftar Absensi Pegawai</h3>
 
 
-	<a href="/absen/add"> + Tambah Absensi</a>
+	<a href="/absen/add" class="btn btn-primary"> + Tambah Absensi</a>
 
 	<br/>
 	<br/>
 
-	<table border="1">
+	<table border="2">
 		<tr>
 			<th>IDPegawai</th>
 			<th>Tanggal</th>
@@ -37,6 +37,7 @@
 		</tr>
 		@endforeach
 	</table>
+    {{$absen->links()}}
     <p>
         Keterangan Status: <br>
         H : Hadir
