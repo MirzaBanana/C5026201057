@@ -1,17 +1,12 @@
 @extends('layout.bahagia')
-@section('title', 'Daftar Pegawai')
+
+@section('title', 'TAMBAH DAFTAR PEGAWAI')
+
 @section('konten')
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tambah Pegawai Sedot WC</title>
-</head>
-<body>
 
 
-	<h3>Tambah Data Pegawai Sedot WC</h3>
-
-	<a href="/pegawai"> Kembali</a>
+<h3> TAMBAH PEGAWAI </h3>
+	<a href="/pegawai" class="btn btn-secondary"> Kembali</a>
 
 	<br/>
 	<br/>
@@ -22,8 +17,7 @@
 		Jabatan <input type="text" name="jabatan" required="required"> <br/>
 		Umur <input type="number" name="umur" required="required"> <br/>
 		Alamat <textarea name="alamat" required="required"></textarea> <br/>
-		<input type="submit" value="Simpan Data">
+		<input type="submit" class='btn btn-success' value="Simpan Data">
 	</form>
 
-</body>
-</html>
+@endsection

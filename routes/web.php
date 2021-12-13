@@ -11,23 +11,27 @@
 |
 */
 
-use App\Http\Controllers\viewcontroller;
+use App\Http\Controllers\ViewController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('volume', function () {
-    return view('tugas4');
+Route::get('praktikum1', function () {
+    return view('prak1web');
 });
 
-Route::get('formregis', function () {
-    return view('praktikum2');
+Route::get('tugas4', function () {
+    return view('tug4pweb');
 });
 
-Route::get('etspweb', 'viewcontroller@showform');
+Route::get('praktikum2', 'ViewController@showPraktikum2');
 
-Route::get('volphp', 'viewcontroller@showform');
+
+Route::get('ets', 'ViewController@showEts');
+
+Route::get('fibo', 'ViewController@showForm');
+Route::post('hasil', 'ViewController@hasilHitung');
 
 //route CRUD
 Route::get('/pegawai','PegawaiController@index');
@@ -37,9 +41,9 @@ Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 Route::get('/pegawai/cari','PegawaiController@cari');
-Route::get('/pegawai/view','PegawaiController@detail');
+Route::get('/pegawai/detail/{id}','PegawaiController@view');
 
-//route CRUD eksplorasi
+//route CRUD tugas
 Route::get('/pendapatan','PendapatanController@index');
 Route::get('/pendapatan/tambah','PendapatanController@tambah');
 Route::post('/pendapatan/store','PendapatanController@store');
@@ -47,10 +51,8 @@ Route::get('/pendapatan/edit/{id}','PendapatanController@edit');
 Route::post('/pendapatan/update','PendapatanController@update');
 Route::get('/pendapatan/hapus/{id}','PendapatanController@hapus');
 
-
-//route CRUD absen
-Route::get('/absen','AbsenController@indexabsen');
-Route::get('/absen/add','AbsenController@add');
+Route::get('/absen','AbsenController@index');
+Route::get('/absen/tambah','AbsenController@tambah');
 Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');

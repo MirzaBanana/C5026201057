@@ -1,5 +1,7 @@
 @extends('layout.bahagia')
+
 @section('title', 'Data Pendapatan')
+
 @section('konten')
 
 <!DOCTYPE html>
@@ -39,9 +41,7 @@
 				<a href="/pendapatan/hapus/{{ $p->ID }}">Hapus</a>
 			</td>
 		</tr>
-		@endforeach
+	@endforeach
 	</table>
-
-
-</body>
-</html>
+    {{ $pendapatan->links() }}
+@endsection

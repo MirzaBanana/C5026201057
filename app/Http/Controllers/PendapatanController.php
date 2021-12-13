@@ -34,8 +34,9 @@ public function store(Request $request)
 {
 	// insert data ke table pendapatan
 	DB::table('pendapatan')->insert([
-		'IDPegawai' => $request->IDPegawai,
-		'Bulan' => $request->IDPegawai,
+		// 'ID' => $request->ID,
+        'IDPegawai' => $request->ID,
+		'Bulan' => $request->Bulan,
 		'Tahun' => $request->Tahun,
 		'Gaji' => $request->Gaji,
         'Tunjangan' => $request->Tunjangan,

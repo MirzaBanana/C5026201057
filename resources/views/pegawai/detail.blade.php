@@ -1,27 +1,39 @@
 @extends('layout.bahagia')
-@section('title', 'Daftar Pegawai')
+
+@section('title', 'DETAIL DAFTAR PEGAWAI')
+
 @section('konten')
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Detail Pegawai Sedot WC</title>
 </head>
 <body>
 
-	<h3>Detail Pegawai Sedot WC</h3>
-
-	<a href="/pegawai"> Kembali</a>
+	<a href="\pegawai" class="btn btn-secondary"> Kembali</a>
 
 	<br/>
 	<br/>
 
 	@foreach($pegawai as $p)
-		Nama <{{ $p->pegawai_nama }}"> <br/>
-		Jabatan <{{ $p->pegawai_jabatan }}"> <br/>
-		Umur <{{ $p->pegawai_umur }}"> <br/>
-		Alamat <{{ $p->pegawai_alamat }}</textarea> <br/>
+
+        <div class="col-sm-3">Nama </div>
+        <div class="col-sm-1">:</div>
+        <div class="col-sm-8"> <label> {{ $p->pegawai_nama }}</label> </div>
+        <div class="col-sm-3">Jabatan</div>
+        <div class="col-sm-1">:</div>
+        <div class="col-sm-8"> <label>{{ $p->pegawai_jabatan }}</label> </div>
+        <div class="col-sm-3">Umur </div>
+        <div class="col-sm-1">:</div>
+        <div class="col-sm-8"> <label>{{ $p->pegawai_umur }}</label> </div>
+        <div class="col-sm-3">Alamat</div>
+        <div class="col-sm-1">:</div>
+        <div class="col-sm-8"> <label>{{ $p->pegawai_alamat }}</label> </div>
+
+
+
 	@endforeach
 
 
 </body>
 </html>
+@endsection

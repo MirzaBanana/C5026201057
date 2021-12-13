@@ -1,30 +1,22 @@
 @extends('layout.bahagia')
-@section('title', 'Data Pendapatan')
+
+@section('title', 'DATA PENDAPATAN')
+
 @section('konten')
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tambah Data Pendapatan Karyawan Perusahaan Sedot WC</title>
-</head>
-<body>
+	<h3>Data pendapatan</h3>
 
-
-	<h3>Tambah Pendapatan</h3>
-
-	<a href="/pendapatan"> Kembali</a>
+	<a href="/pendapatan" class="btn btn-primary"> Kembali</a>
 
 	<br/>
 	<br/>
 
 	<form action="/pendapatan/store" method="post">
 		{{ csrf_field() }}
-		IDPegawai <input type="number" name="nama" required="required"> <br/>
-		Bulan <input type="number" name="bulan" required="required"> <br/>
-		Tahun <input type="char" name="tahun" maxlength="4" required="required"> <br/>
-        Gaji <input type="number" name="gaji" required="required"> <br/>
-        Tunjangan <input type="number" name="tunjangan" required="required"> <br/>
-		<input type="submit" value="Simpan Data">
+		idpegawai <input type="number" name="idpegawai" required="required"> <br/>
+		bulan <input type="number" name="bulan" required="required"> <br/>
+		tahun <input type="number" name="tahun" required="required"> <br/>
+        gaji <input type="number" name="gaji" required="required"> <br/>
+        tunjangan <input type="number" name="tunjangan" required="required"> <br/>
+		<input type="submit" class='btn btn-success' value="Simpan Data">
 	</form>
-
-</body>
-</html>
+@endsection

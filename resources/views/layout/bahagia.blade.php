@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>@yield('title')</title>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -15,52 +14,50 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-
 <style>
-    body{
-        background-color: rgb(255, 255, 255);
+    body {
+        background-color: #f2f2f2
     }
-.jumbotron{
-        background-color: #55c078;
+    .header{
+        background-color: #a87aff;
+        border-bottom: 5px solid black;
 
     }
-
+    .footer{
+        background-color: #a87aff;
+        border-top: 2px solid black;
+    }
 </style>
-
 <body>
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <img src="layouo\image0.jpg" class="rounded" alt="foto pembuat">
-  <h6>Mirza Aditya Badarudin</h6>
+<div class="header">
+    <center><img src="imageo.jpg" class="mx-auto d-block">
+            <h4> 5026201057 Mirza Aditya Badarudin </h4>
+    </center>
+
 </div>
-    <div class="container">
-  <ul class="nav flex-column">
-    <li>
-      <a href="/pegawai">Daftar Pegawai Sedot WC</a>
-    </li>
-    <li>
-      <a href="/absen">Absensi Pegawai Sedot WC</a>
-    </li>
-    <li>
-      <a href="/pendapatan">Data Pendapatan Pegawai Sedot WC</a>
-    </li>
-    <li>
-      <a href="#">Minggu Depan</a>
-    </li>
-    <li>
-      <li><a href="#">Praktikum</a>
-    </li>
-  </ul>
-</div>
+<div class="container container m-2">
+    <div class="col-sm-2">
+        <h3 class="text-center">Menu</h3>
+                    <h4 class="a">
+                        <a  href="/pegawai">Pegawai</a> <br>
+                        <a  href="/absen">Absen</a> <br>
+                        <a  href="/pendapatan">Pendapatan</a> <br>
+                        <a  href="/#">Minggu Depan</a> <br>
+                        <a  href="/#">Praktikum</a> <br>
+                    </h4>
+    </div>
     <div class="col-sm-8">
     @section('konten')
     @show
     </div>
-    <div class="jumbotron text-center" style="margin-bottom:0">
-  <h6>Copyrights Mirza Aditya Badarudin</h6>
-  <h6>2021</h6>
 </div>
+<footer>
+<div class="footer">
+    <center>
+    <h5> Copyrights by Mirza Aditya Badarudin </h5>
+    <h5> 2021 </h5>
+    </center>
+</footer>
 </div>
-
 </body>
-
 </html>

@@ -1,50 +1,36 @@
 @extends('layout.bahagia')
-@section('title', 'Data Absen')
+
+@section('title', 'DATA ABSEN')
+
 @section('konten')
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tabel Absen Pegawai Sedot WC</title>
-</head>
-<body>
+	<h3>ABSEN PEGAWAI</h3>
 
-	<h3>Daftar Absensi Pegawai</h3>
-
-
-	<a href="/absen/add" class="btn btn-primary"> + Tambah Absensi</a>
+	<a href="/absen/tambah" class="btn btn-primary" > + Tambah Absen Pegawai Baru</a>
 
 	<br/>
 	<br/>
 
-	<table border="2">
+	<table class="table table-success table-striped">
 		<tr>
-			<th>IDPegawai</th>
+			<th>Nama Pegawai</th>
 			<th>Tanggal</th>
 			<th>Status</th>
 			<th>Opsi</th>
 		</tr>
-		@foreach($absen as $a)
+		@foreach($absen as $p)
 		<tr>
-			<td>{{ $a->IDPegawai }}</td>
-			<td>{{ $a->Tanggal }}</td>
-			<td>{{ $a->Status }}</td>
+			<td>{{ $p->pegawai_nama }}</td>
+			<td>{{ $p->Tanggal }}</td>
+			<td>{{ $p->Status }}</td>
 			<td>
-				<a href="/absen/edit/{{ $a->ID }}">Edit Absensi</a>
+				<a href="/absen/edit/{{ $p->ID }}" class="btn btn-warning" >Edit</a>
 				|
-				<a href="/absen/hapus/{{ $a->ID }}">Delete Absensi</a>
+				<a href="/absen/hapus/{{ $p->ID }}" class="btn btn-danger" >Hapus</a>
 			</td>
 		</tr>
 		@endforeach
 	</table>
-    {{$absen->links()}}
-    <p>
-        Keterangan Status: <br>
-        H : Hadir
-        I : Izin <br>
-        S : Sakit <br>
-        A : Alfa <br>
-        </p>
+    {{ $absen->links() }}
 
-</body>
-</html>
+@endsection
