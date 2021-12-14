@@ -20,20 +20,19 @@
             <th>tunjangan</th>
 			<th>Opsi</th>
 		</tr>
-		@foreach($pendapatan as $p)
+		@foreach($pendapatan as $c)
 		<tr>
-			<td>{{ $p->IDPegawai }}</td>
-			<td>{{ $p->bulan }}</td>
-			<td>{{ $p->tahun }}</td>
-			<td>{{ $p->gaji }}</td>
-            <td>{{ $p->tunjangan }}</td>
+			<td>{{ $c->IDPegawai }}</td>
+			<td>{{ $c->Bulan }}</td>
+			<td>{{ $c->Tahun }}</td>
+			<td>{{ $c->Gaji }}</td>
+            <td>{{ $c->Tunjangan }}</td>
 			<td>
-				<a href="/pendapatan/edit/{{ $p->pendapatan_id }}" class="btn btn-warning" >Edit</a>
+				<a href="/pendapatan/edit/{{ $c->ID }}" class="btn btn-warning" >Edit</a>
 				|
-				<a href="/pendapatan/hapus/{{ $p->pendapatan_id }}" class="btn btn-danger" >Hapus</a>
+				<a href="/pendapatan/hapus/{{ $c->ID }}" class="btn btn-danger" >Hapus</a>
 			</td>
 		</tr>
 		@endforeach
 	</table>
-    {{ $pendapatan->links() }}
 @endsection

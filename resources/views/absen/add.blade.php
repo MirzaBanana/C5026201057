@@ -1,51 +1,72 @@
 @extends('layout.bahagia')
-
-@section('title', 'ABSEN PEGAWAI')
+@section('title', 'Data Absen')
+@section('judulhalaman', 'TAMBAH DATA ABSEN')
 
 @section('konten')
+    <a href="/absen"> Kembali</a>
 
-@section('judulhalaman', 'TAMBAH ABSEN')
+    <br />
+    <br />
 
-	<h3>Absen Pegawai</h3>
+    <form action="/absen/store" method="post">
+        {{ csrf_field() }}
+        <div class="container" id="ubah">
 
-	<a href="/absen" class="btn btn-secondary"> Kembali</a>
+            <div class="row">
+                <div class='col-lg-12'>
+                    <div class="form-group">
+                        <label for="nama" class="col-sm-2 control-label">Nama Pegawai</label>
+                        <div class='col-sm-4 input-group date' id='nama'>
+                            <select class="form-control" name="idpegawai">
+                                @foreach($pegawai as $p )
+                                    <option value="{{ $p->pegawai_id }}"> {{ $p->pegawai_nama }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-	<br/>
-	<br/>
 
-	<form action="/absen/store" method="post">
-		{{ csrf_field() }}
-		Pegawai <select id="IDPegawai" name="IDPegawai" required="required">
-            @foreach($pegawai as $p)
-                <option value="{{ $p->pegawai_id }}"> {{ $p->pegawai_nama }}</option>
-            @endforeach
-        </select><br>
-            <div class="form-group">
-                <label for="dtpickerdemo" class="col-sm-2 control-label">Tanggal :</label>
-                    <div class='col-sm-4 input-group date ' id='dtpickerdemo'>
-                        <input type='text' class="form-control" name="tanggal" />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
+            <div class="row">
+                <div class='col-lg-12'>
+                    <div class="form-group">
+                        <label for="dtpickerdemo" class="col-sm-2 control-label">Tanggal :</label>
+                        <div class='col-sm-4 input-group date' id='dtpickerdemo'>
+                            <input type='text' class="form-control" name="tanggal" required="required" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <script type="text/javascript">
-                    $(function () {
-                        $('#dtpickerdemo').datetimepicker({format : "YYYY-MM-DD hh:mm", "defaultDate":new Date() });
+                    $(function() {
+                        $('#dtpickerdemo').datetimepicker({
+                            format: "YYYY-MM-DD hh:mm:ss",
+                            "defaultDate": new Date(),
+                            locale : "id"
+                        });
                     });
                 </script>
-                <br>
-            Status <br />
-        <input type="radio" id="hadir" name="status" value="H">
-        <label for="hadir">Hadir</label><br>
-        <input type="radio" id="html" name="status" value="I">
-        <label for="html">Izin</label><br>
-        <input type="radio" id="css" name="status" value="S" checked="checked">
-        <label for="css">Sakit</label><br>
-        <input type="radio" id="javascript" name="status" value="A">
-        <label for="javascript">Alfa</label>
-        <br>
-        <input type="submit" value="Simpan Data">
+            </div>
+            <div class='col-lg-12'>
+                <div class="form-group">
+                    <b>Status :</b>
+                    <input type="radio" id="h" name="status" value="H">
+                    <label for="h">HADIR</label>
+                    <input type="radio" id="a" name="status" value="A" checked="checked">
+                    <label for="a">TIDAK HADIR</label>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class='col-lg-12'>
+                <input type="submit" class="btn btn-green" value="Simpan Data">
+            </div>
+
+        </div>
+
     </form>
 @endsection
-

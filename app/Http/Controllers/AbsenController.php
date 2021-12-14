@@ -15,14 +15,14 @@ class AbsenController extends Controller
        $absen = DB::table('absen')
        ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
        ->select('absen.*', 'pegawai.pegawai_nama')
-       ->paginate() ;
+       ->paginate(5) ;
 
 
 
         // mengirim data absen ke view indexabsen
         return view('absen.indexabsen', ['absen' => $absen]);
     }
-    // method untuk menampilkan view form tambah absen
+    // method untuk menampilkan view form add absen
     public function add()
     {
         // mengambil data dari table pegawai

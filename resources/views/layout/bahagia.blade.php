@@ -8,11 +8,6 @@
 	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
 	<script src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <style>
     body {
@@ -26,11 +21,16 @@
     .footer{
         background-color: #a87aff;
         border-top: 2px solid black;
+
+    }
+    #foto{
+        width: 200px;
+
     }
 </style>
 <body>
 <div class="header">
-    <center><img src="imageo.jpg" class="mx-auto d-block">
+    <center><img src="https://i.ibb.co/c68qPXC/Mirza-Aditya-Badarudin.jpg" id=foto class="mx-auto d-block img-responsive">
             <h4> 5026201057 Mirza Aditya Badarudin </h4>
     </center>
 

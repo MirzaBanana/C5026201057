@@ -11,29 +11,34 @@
 
 
 <h1>{{ $judul }}</h1>
-	@foreach($absen as $p)
+	@foreach($absen as $a)
 	<form action="/absen/update" method="post">
 		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $p->ID }}"> <br/>
+		<input type="hidden" name="id" value="{{ $a->ID }}"> <br/>
         Pegawai <select id="IDPegawai" name="IDPegawai" required="required">
-            @foreach($pegawai as $peg)
-                <option value="{{ $peg->pegawai_id }}" @if ($peg->pegawai_id === $p->IDPegawai) selected="selected" @endif> {{ $peg->pegawai_nama }}</option>
+            @foreach($pegawai as $p)
+                <option value="{{ $p->pegawai_id }}" @if ($p->pegawai_id === $a->IDPegawai) selected="selected" @endif> {{ $p->pegawai_nama }}</option>
             @endforeach
         </select><br>
         <div class="form-group">
             <label for="dtpickerdemo" class="col-sm-2 control-label">Tanggal :</label>
                 <div class='col-sm-4 input-group date ' id='dtpickerdemo'>
-                    <input type='text' class="form-control" name="tanggal" value="{{ $p->Tanggal }}"/>
+                    <input type='text' class="form-control" name="tanggal" value="{{ $a->Tanggal }}"/>
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
                 </div>
             </div>
             <script type="text/javascript">
-                $(function () {
-                    $('#dtpickerdemo').datetimepicker({format : "YYYY-MM-DD hh:mm", "defaultDate":new Date() });
-                });
-            </script>
+                    $(function() {
+                        $('#dtpickerdemo').datetimepicker({
+                            format: 'YYYY-MM-DD hh:mm:ss',
+                            showTodayButton: false,
+                            locale : 'id',
+                            "defaultDate": new Date(),
+                        });
+                    });
+                </script>
             <br>
 		Status <br />
         <input type="radio" id="hadir" name="status" value="H">

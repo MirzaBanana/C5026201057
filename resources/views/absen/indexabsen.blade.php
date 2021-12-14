@@ -6,7 +6,7 @@
 
 	<h3>ABSEN PEGAWAI</h3>
 
-	<a href="/absen/tambah" class="btn btn-primary" > + Tambah Absen Pegawai Baru</a>
+	<a href="/absen/add" class="btn btn-primary" > + Tambah Absen Pegawai Baru</a>
 
 	<br/>
 	<br/>
