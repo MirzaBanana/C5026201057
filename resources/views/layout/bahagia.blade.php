@@ -43,7 +43,7 @@
                         <a  href="/absen">Absen</a> <br>
                         <a  href="/pendapatan">Pendapatan</a> <br>
                         <a  href="/#">Minggu Depan</a> <br>
-                        <a  href="/#">Praktikum</a> <br>
+                        <a  href="/bedak">Praktikum</a> <br>
                     </h4>
     </div>
     <div class="col-sm-8">
