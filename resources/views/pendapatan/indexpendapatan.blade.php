@@ -1,47 +1,39 @@
 @extends('layout.bahagia')
 
-@section('title', 'Data Pendapatan')
+@section('title', 'DATA PENDAPATAN')
 
 @section('konten')
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Data Pendapatan Karyawan Perusahaan Sedot WC</title>
-</head>
-<body>
+	<h3>DATA PENDAPATAN</h3>
 
-
-	<h3>Data Pendapatan Karyawan Sedot WC</h3>
-
-	<a href="/pendapatan/tambah" class="btn btn-primary"> + Tambah Pendapatan Pegawai</a>
+	<a href="/pendapatan/tambah" class="btn btn-primary"> + Tambah tabel pendapatan</a>
 
 	<br/>
 	<br/>
 
-	<table border="2">
+	<table class="table table-success table-striped">
 		<tr>
-			<th>IDPegawai</th>
-			<th>Bulan</th>
-			<th>Tahun</th>
-			<th>Gaji</th>
-            <th>Tunjangan</th>
+			<th>ID Pegawai</th>
+			<th>bulan</th>
+			<th>tahun</th>
+			<th>gaji</th>
+            <th>tunjangan</th>
 			<th>Opsi</th>
 		</tr>
 		@foreach($pendapatan as $p)
 		<tr>
 			<td>{{ $p->IDPegawai }}</td>
-			<td>{{ $p->Bulan }}</td>
-			<td>{{ $p->Tahun }}</td>
-			<td>{{ $p->Gaji }}</td>
-            <td>{{ $p->Tunjangan }}</td>
+			<td>{{ $p->bulan }}</td>
+			<td>{{ $p->tahun }}</td>
+			<td>{{ $p->gaji }}</td>
+            <td>{{ $p->tunjangan }}</td>
 			<td>
-				<a href="/pendapatan/edit/{{ $p->ID }}">Edit</a>
+				<a href="/pendapatan/edit/{{ $p->pendapatan_id }}" class="btn btn-warning" >Edit</a>
 				|
-				<a href="/pendapatan/hapus/{{ $p->ID }}">Hapus</a>
+				<a href="/pendapatan/hapus/{{ $p->pendapatan_id }}" class="btn btn-danger" >Hapus</a>
 			</td>
 		</tr>
-	@endforeach
+		@endforeach
 	</table>
     {{ $pendapatan->links() }}
 @endsection
