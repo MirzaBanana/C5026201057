@@ -89,10 +89,10 @@
                     <a href="profilwithcss.html">Tugas 2</a>
                     <a href="bootstrapMirzaAditya.html">Tugas 3</a>
                     <a href="MirzaAdityaBadarudin_5026201057_BukalapakClone.html">Praktikum 1</a>
-                    <a href="volume">Tugas 4</a>
-                    <a href="formregis">Praktikum 2</a>
-                    <a href="etspweb">ETS</a>
-                    <a href="volphp">Tugas PHP</a>
+                    <a href="tugas4">Tugas 4</a>
+                    <a href="praktikum2">Praktikum 2</a>
+                    <a href="ets">ETS</a>
+                    <a href="php">Tugas PHP</a>
                 </div>
             </div>
         </div>

@@ -21,16 +21,17 @@ Route::get('praktikum1', function () {
     return view('prak1web');
 });
 
-Route::get('tugas4', function () {
-    return view('tug4pweb');
-});
+// Route::get('tugas4', function () {
+//     return view('tugas4');
+// });
 
-Route::get('praktikum2', 'ViewController@showPraktikum2');
+Route::get('praktikum2', 'ViewController@showform');
 
 
-Route::get('ets', 'ViewController@showEts');
+Route::get('tugas4', 'ViewController@tugas4');
+Route::get('ets', 'ViewController@ets');
 
-Route::get('fibo', 'ViewController@showForm');
+Route::get('php', 'ViewController@php');
 Route::post('hasil', 'ViewController@hasilHitung');
 
 //route CRUD

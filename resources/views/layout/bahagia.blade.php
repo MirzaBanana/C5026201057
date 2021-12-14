@@ -42,7 +42,6 @@
                         <a  href="/pegawai">Pegawai</a> <br>
                         <a  href="/absen">Absen</a> <br>
                         <a  href="/pendapatan">Pendapatan</a> <br>
-                        <a  href="/#">Minggu Depan</a> <br>
                         <a  href="/bedak">Praktikum</a> <br>
                     </h4>
     </div>

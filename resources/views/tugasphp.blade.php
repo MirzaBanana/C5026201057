@@ -27,7 +27,7 @@
   } else {
     $jariJari = test_input($_POST["jariJari]);
     // check if jariJari only contains numbers
-    if (!preg_match("/^[0-9]*$/",$jariJari)) {
+    if (!preg_match('/[0-9]*$/',$jariJari)) {
       $jariJariErr = "Only numbers allowed";
     }
   }
