@@ -68,3 +68,10 @@ Route::post('/bedak/update','BedakController@update');
 Route::get('/bedak/hapus/{id}','BedakController@hapus');
 Route::get('/bedak/cari','BedakController@cari');
 Route::get('/bedak/detail/{id}','BedakController@view');
+
+// route CRUD EAS
+Route::get('/karyawan1','Karyawan1Controller@index');
+Route::get('/karyawan1/tambah','Karyawan1Controller@tambah');
+Route::post('/karyawan1/store','Karyawan1Controller@store');
+Route::get('/karyawan1/hapus/{id}','Karyawan1Controller@hapus');
+

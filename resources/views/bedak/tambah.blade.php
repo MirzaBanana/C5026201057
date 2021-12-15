@@ -5,7 +5,7 @@
 @section('konten')
 
 
-<h3> TAMBAH PEGAWAI </h3>
+<h3> TAMBAH BEDAK </h3>
 	<a href="/pegawai" class="btn btn-secondary"> Kembali</a>
 
 	<br/>
