@@ -43,6 +43,7 @@
                         <a  href="/absen">Absen</a> <br>
                         <a  href="/pendapatan">Pendapatan</a> <br>
                         <a  href="/bedak">Praktikum</a> <br>
+                        <a  href="/karyawan1">EAS</a> <br>
                     </h4>
     </div>
     <div class="col-sm-8">

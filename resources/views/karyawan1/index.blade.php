@@ -6,7 +6,7 @@
 
     <h3> DAFTAR KARYAWAN </h3>
 
-
+<a href="/karyawan1/tambah" class="btn btn-primary">Tambah Data</a>
 	<br/>
 	<br/>
 <div class="col-sm-8container" align='center'>
@@ -28,9 +28,8 @@
             <td>{{ $p->Pangkat }}</td>
             <td>{{ number_format($p->Gaji, 0, ',', '.') }}</td>
 			<td>
-                <a href="/karyawan1/tambah" class="btn btn-primary">Tambah Data</a>
-				|
-				<a href="/karyawan1/hapus" class="btn btn-danger" >Hapus Data</a>
+
+				<a href="/karyawan1/hapus/{{ $p->NIP }}" class="btn btn-danger" >Hapus Data</a>
 
 			</td>
 		</tr>

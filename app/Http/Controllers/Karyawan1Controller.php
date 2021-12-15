@@ -42,10 +42,10 @@ class Karyawan1Controller extends Controller
     public function hapus($id)
     {
         // menghapus data bedak berdasarkan id yang dipilih
-        DB::table('bedak')->where('kodebedak', $id)->delete();
+        DB::table('karyawan1')->where('NIP', $id)->delete();
 
         // alihkan halaman ke halaman bedak
-        return redirect('/bedak');
+        return redirect('/karyawan1');
     }
 
 }
